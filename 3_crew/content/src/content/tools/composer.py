@@ -86,7 +86,7 @@ class ComposeSlideInput(BaseModel):
 class ComposeSlideTool(BaseTool):
     name: str = "compose_slide"
     description: str = (
-        "Compose a final 1080x1350 Instagram slide with brand overlays (title, body, optional CTA, logo). "
+        "Compose a final 1024x1024 Instagram slide with brand overlays (title, body, optional CTA, logo). "
         "Will fit the base image to canvas with padding, draw text with Inter font if available, and place logo bottom-right."
     )
     args_schema: Type[BaseModel] = ComposeSlideInput

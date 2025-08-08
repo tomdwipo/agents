@@ -57,7 +57,9 @@ class AddLogoToImageTool(BaseTool):
             'top-right': (base_width - logo_width - margin, margin),
             'bottom-left': (margin, base_height - logo_height - margin),
             'bottom-right': (base_width - logo_width - margin, base_height - logo_height - margin),
-            'center': ((base_width - logo_width) // 2, (base_height - logo_height) // 2)
+            'center': ((base_width - logo_width) // 2, (base_height - logo_height) // 2),
+            'bottom-bellow-center': ((base_width - logo_width) // 2, base_height - logo_height - 200)
+
         }
 
         if position not in position_map:

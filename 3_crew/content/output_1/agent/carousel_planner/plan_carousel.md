@@ -1,0 +1,1 @@
+{ "slides": [ { "index": 1, "title": "AI Powers Your Life", "bullets": [ "Smart photo albums", "Spam email filters" ] }, { "index": 2, "title": "AI Keeps You Safe", "bullets": [ "Detects banking fraud", "How else AI helps?" ] } ] }

@@ -10,6 +10,7 @@ from content.tools.composer import ComposeSlideTool
 from content.tools.export_metadata import ExportMetadataTool
 from content.tools.save_json import SaveJSONTool
 from content.tools.image_utils import AddLogoToImageTool
+from content.tools.text_utils import AddTextToImageTool
 
 
 @CrewBase
@@ -31,9 +32,6 @@ class Content():
     def copywriter(self) -> Agent:
         return Agent(
             config=self.agents_config['copywriter'],  # type: ignore[index]
-               tools=[
-                SerperDevTool(),
-            ],
             verbose=True
         )
 
@@ -52,6 +50,7 @@ class Content():
             tools=[
                 GenerateImageTool(),
                 AddLogoToImageTool(),
+                AddTextToImageTool(),
             ],
             verbose=True
         )  
@@ -86,7 +85,11 @@ class Content():
         return Task(
             config=self.tasks_config['generate_add_logo_to_image'],  # type: ignore[index]
         )
-
+    @task
+    def generate_text_to_image(self) -> Task:
+        return Task(
+            config=self.tasks_config['generate_text_to_image'],  # type: ignore[index]
+        )
 
     @crew
     def crew(self) -> Crew:
@@ -104,7 +107,8 @@ class Content():
                 self.write_copy_task(),
                 self.engineer_prompts_task(),
                 self.generate_images_task(),
-                self.generate_images_logo_task()
+                self.generate_images_logo_task(),
+                self.generate_text_to_image()
             ],
             process=Process.sequential,
             verbose=True,

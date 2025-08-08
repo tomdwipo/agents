@@ -13,13 +13,13 @@ warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 # Replace with inputs you want to test with, it will automatically
 # interpolate any tasks and agents information
 
-DEFAULT_TOPIC = "How Compound Interest Works"
+DEFAULT_TOPIC = "How AI Help Us"
 DEFAULT_SLIDE_COUNT = 2
 DEFAULT_PRIMARY = "#000000"
 DEFAULT_SECONDARY = "#FFFFFF"
 DEFAULT_BRAND_LOGO = "assets/logo.png"
-DEFAULT_BRAND_FONT = "3_crew/content/assets/fonts/InterVariable.ttf"
-DEFAULT_OUTPUT_BASE = "3_crew/content/output/carousels"
+DEFAULT_BRAND_FONT = "assets/fonts/Inter.ttf"
+DEFAULT_OUTPUT_BASE = "content/output/carousels"
 
 
 def _base_inputs(topic: str) -> dict:
