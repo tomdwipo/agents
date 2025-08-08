@@ -17,9 +17,10 @@ write_copy:
     Using the outline from plan_carousel, write final per-slide copy.
     For each slide output: index, body (<= 5 words, single short paragraph),
     cta (only on the last slide, else null). Tone: educational, clear, concise. No emojis, no hashtags.
+    caption for 1 post instragam make viral but elegant
     Output must be valid JSON only, no commentary or code fences.
   expected_output: >
-    { "slides": [ { "index": 1, "body": "Short paragraph", "cta": null }, ... ] }
+    { "slides": [ { "index": 1, "body": "Short paragraph", "cta": null, caption:"" }, ... ] },
   agent: copywriter
   output_file: output/agent/copywriter/write_copy.md
 
@@ -52,7 +53,7 @@ generate_add_logo_to_image:
   description: >
     For each generate_image, call tool for AddLogoToImageTool:
     base_image_path=image_path, logo_path={brand_logo}, 
-    output_path='output/',
+    output_path='output/{slug}/',
     opacity=1,
     margin=0,
     logo_size=(150, 120) 
@@ -65,7 +66,7 @@ generate_add_logo_to_image:
 generate_text_to_image:
   description: >
     For each generate_add_logo_to_image, call tool for AddTextToImageTool:
-          image_path='output/',
+          image_path='output/{slug}/',
         text= get from generate_add_logo_to_image body output,
         output_path='output/',
         position= should use position type 'center' not other,
