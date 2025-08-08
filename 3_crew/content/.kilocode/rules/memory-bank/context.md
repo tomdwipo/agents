@@ -25,7 +25,7 @@ Recent changes
     - [3_crew/content/src/content/tools/brand.py](3_crew/content/src/content/tools/brand.py)
   - IO utils:
     - [3_crew/content/src/content/tools/io_utils.py](3_crew/content/src/content/tools/io_utils.py)
-  - OpenAI image generation tool (currently configured for DALL·E 3 with fallback placeholder):
+  - DALL-E image generation tool:
     - [3_crew/content/src/content/tools/openai_images.py](3_crew/content/src/content/tools/openai_images.py)
   - Slide compositor (Pillow-based overlays, InterVariable font, logo bottom-right):
     - [3_crew/content/src/content/tools/composer.py](3_crew/content/src/content/tools/composer.py)

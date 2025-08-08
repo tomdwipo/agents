@@ -29,8 +29,8 @@ Dependencies (declared)
 
 Tool usage patterns
 - Image generation tool:
-  - [class GenerateImageTool(BaseTool)](3_crew/content/src/content/tools/openai_images.py:38)
-  - Default model: "dall-e-3" (fallback placeholder if API blocked)
+  - [class DallETool(BaseTool)](https://github.com/crewAI/crewAI-tools/blob/main/src/crewai_tools/tools/dalle_image_generator_tool/dalle_image_generator_tool.py)
+  - Default model: "dall-e-3"
   - Generates 1024x1024 PNGs into output/carousels/{slug}/raw/slide_XX.png
 - Composer tool:
   - [class ComposeSlideTool(BaseTool)](3_crew/content/src/content/tools/composer.py:86)
@@ -41,6 +41,8 @@ Tool usage patterns
   - Persists metadata.json and caption.txt and is wired as task artifact
 - Save JSON tool:
   - [class SaveJSONTool(BaseTool)](3_crew/content/src/content/tools/save_json.py:14)
+- Serper search tool:
+  - [class SerperDevTool(BaseTool)](https://github.com/crewAI/crewAI-tools/blob/main/src/crewai_tools/tools/serper_dev_tool/serper_dev_tool.py)
 
 Environment variables
 - OPENAI_API_KEY in [3_crew/content/.env](3_crew/content/.env) or root .env

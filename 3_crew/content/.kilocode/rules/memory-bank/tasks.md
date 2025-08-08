@@ -18,7 +18,7 @@ Files to modify or review
 - Data models and tools:
   - [class BrandConfig(BaseModel)](3_crew/content/src/content/types.py:8)
   - [class ComposeSlideTool(BaseTool)](3_crew/content/src/content/tools/composer.py:86)
-  - [class GenerateImageTool(BaseTool)](3_crew/content/src/content/tools/openai_images.py:38)
+  - [class DallETool(BaseTool)](https://github.com/crewAI/crewAI-tools/blob/main/src/crewai_tools/tools/dalle_image_generator_tool/dalle_image_generator_tool.py)
   - [class ExportMetadataTool(BaseTool)](3_crew/content/src/content/tools/export_metadata.py:28)
   - [class SaveJSONTool(BaseTool)](3_crew/content/src/content/tools/save_json.py:14)
   - [def outline_prompt(...)](3_crew/content/src/content/tools/templates.py:6)
@@ -73,7 +73,7 @@ Step-by-step workflow
    - Outline, copy, image prompts, and caption/hashtags builders in [3_crew/content/src/content/tools/templates.py](3_crew/content/src/content/tools/templates.py).
 
 6) Image generation tool
-   - Model default set to "dall-e-3" with placeholder fallback in [3_crew/content/src/content/tools/openai_images.py](3_crew/content/src/content/tools/openai_images.py:13).
+   - Model default set to "dall-e-3" in [3_crew/content/src/content/tools/openai_images.py](3_crew/content/src/content/tools/openai_images.py:13).
    - On image API errors (e.g., org verification required), a white placeholder PNG is created to keep pipeline running.
 
 7) Composition tool

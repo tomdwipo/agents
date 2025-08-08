@@ -16,10 +16,8 @@ Key components and relationships
     - Tasks:
       - [def plan_carousel_task(self) -> Task](3_crew/content/src/content/crew.py:84)
       - [def write_copy_task(self) -> Task](3_crew/content/src/content/crew.py:90)
-      - [def engineer_prompts_task(self) -> Task](3_crew/content/src/content/crew.py:96)
-      - [def generate_images_task(self) -> Task](3_crew/content/src/content/crew.py:102)
-      - [def compose_slides_task(self) -> Task](3_crew/content/src/content/crew.py:108)
-      - [def export_metadata_task(self) -> Task](3_crew/content/src/content/crew.py:114)
+      - [def engineer_prompts_task(self) -> Task](3_crew/content/src/content/crew.py:71)
+      - [def generate_images_task(self) -> Task](3_crew/content/src/content/crew.py:77)
 
 - Config (YAML)
   - Agents roles/goals: [3_crew/content/src/content/config/agents.yaml](3_crew/content/src/content/config/agents.yaml)
@@ -40,7 +38,7 @@ Key components and relationships
 
 - Tools
   - Image generation:
-    - [class GenerateImageTool(BaseTool)](3_crew/content/src/content/tools/openai_images.py:38)
+    - [class DallETool(BaseTool)](https://github.com/crewAI/crewAI-tools/blob/main/src/crewai_tools/tools/dalle_image_generator_tool/dalle_image_generator_tool.py)
   - Slide composition:
     - [class ComposeSlideTool(BaseTool)](3_crew/content/src/content/tools/composer.py:86)
   - Brand utilities:
@@ -68,10 +66,8 @@ Critical flows
 - Pipeline (sequential):
   1) plan_carousel -> outline JSON (slides: title + bullets)
   2) write_copy -> final per-slide title/body (+ CTA on last)
-  3) engineer_prompts -> visual prompt per slide (no text in image)
-  4) generate_images -> calls generate_image tool; saves raw/slide_XX.png (1024x1024)
-  5) compose_slides -> composites text overlays + logo into slides/slide_XX.png (1080x1350)
-  6) export_metadata -> writes metadata.json and caption/caption.txt; sets output_file for task artifact
+  3) engineer_prompts -> visual prompt per slide (including text in image)
+  4) generate_images -> calls DALL-E tool; saves raw/slide_XX.png (1024x1024)
 - Output locations:
   - Base: output/carousels/{slug}/
   - Raw images: raw/slide_XX.png

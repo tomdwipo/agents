@@ -13,7 +13,7 @@ How it works
 - The crew runs a sequential pipeline of agents configured in YAML and wired in Python:
   - Planner: produces a 7-slide outline.
   - Copywriter: writes concise, educational copy per slide.
-  - Image Prompt Engineer: crafts visual prompts (no text) for the image model.
+  - Image Prompt Engineer: crafts visual prompts (including text) for the image model.
   - Compositor: generates images, applies brand overlays, exports final slides and metadata.
 - Key orchestrations:
   - [class Content](3_crew/content/src/content/crew.py:13) wires agents and tasks sequentially
@@ -60,7 +60,7 @@ Key files (for product behavior)
 - Crew wiring: [class Content](3_crew/content/src/content/crew.py:13)
 - Entrypoint: [def run()](3_crew/content/src/content/main.py:29)
 - Tools:
-  - Images: [class GenerateImageTool](3_crew/content/src/content/tools/openai_images.py:38)
+  - Images: [class DallETool](https://github.com/crewAI/crewAI-tools/blob/main/src/crewai_tools/tools/dalle_image_generator_tool/dalle_image_generator_tool.py)
   - Composer: [class ComposeSlideTool](3_crew/content/src/content/tools/composer.py:86)
   - Export: [class ExportMetadataTool](3_crew/content/src/content/tools/export_metadata.py:28)
   - Templates: [def outline_prompt](3_crew/content/src/content/tools/templates.py:6), [def slide_copy_prompt](3_crew/content/src/content/tools/templates.py:34), [def image_prompt_prompt](3_crew/content/src/content/tools/templates.py:66), [def caption_hashtags_prompt](3_crew/content/src/content/tools/templates.py:98)
