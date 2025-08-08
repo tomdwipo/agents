@@ -9,6 +9,7 @@ from content.tools.openai_images import GenerateImageTool
 from content.tools.composer import ComposeSlideTool
 from content.tools.export_metadata import ExportMetadataTool
 from content.tools.save_json import SaveJSONTool
+from content.tools.image_utils import AddLogoToImageTool
 
 
 @CrewBase
@@ -49,7 +50,8 @@ class Content():
         return Agent(
             config=self.agents_config['compositor'],  # type: ignore[index]
             tools=[
-                DallETool(),
+                GenerateImageTool(),
+                AddLogoToImageTool(),
             ],
             verbose=True
         )  
@@ -78,6 +80,12 @@ class Content():
         return Task(
             config=self.tasks_config['generate_image'],  # type: ignore[index]
         )
+    
+    @task
+    def generate_images_logo_task(self) -> Task:
+        return Task(
+            config=self.tasks_config['generate_add_logo_to_image'],  # type: ignore[index]
+        )
 
 
     @crew
@@ -96,6 +104,7 @@ class Content():
                 self.write_copy_task(),
                 self.engineer_prompts_task(),
                 self.generate_images_task(),
+                self.generate_images_logo_task()
             ],
             process=Process.sequential,
             verbose=True,

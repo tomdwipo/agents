@@ -10,7 +10,7 @@ plan_carousel:
   expected_output: >
     { "slides": [ { "index": 1, "title": "Title", "bullets": ["...", "..."] }, ... ] }
   agent: carousel_planner
-  output_file: output/agent/carousel_planner/plan_carousel.json
+  output_file: output/agent/carousel_planner/plan_carousel.md
 
 write_copy:
   description: >
@@ -21,21 +21,21 @@ write_copy:
   expected_output: >
     { "slides": [ { "index": 1, "title": "Title", "body": "Short paragraph", "cta": null }, ... ] }
   agent: copywriter
-  output_file: output/agent/copywriter/write_copy.json
+  output_file: output/agent/copywriter/write_copy.md
 
 
 engineer_prompts:
   description: >
-    For each slide, craft a visual prompt for dall-e that supports the message from agent copywriter.
+    For each slide, craft a visual prompt for iamgen that supports the message from agent copywriter.
     Include subject, setting, composition, style (e.g., modern, minimal), lighting, color mood.
     Require high-contrast areas for black/white overlays. Explicitly: "no watermarks".
     focus on text from write_copy task.
-    image should contains title, body, and cta if necessary
+    prompt structure is like this: Minimalist flat design vector icon of a [CONCEPT]. The icon is a single, centered glyph with clean, sharp lines. Solid black background. The iconography is a solid, vibrant purple with the hex code #6a45ff. No gradients, no shadows, no text. Symmetrical and perfectly balanced, ideal for an Instagram post.
     Output must be valid JSON only.
   expected_output: >
     { "prompts": [ { "index": 1, "prompt": "...", "title":"Title", "body": "Short paragraph", "cta": null }, ... ] }
   agent: image_prompt_engineer
-  output_file: output/agent/image_prompt_engineer/engineer_prompts.json
+  output_file: output/agent/image_prompt_engineer/engineer_prompts.md
 
 
 generate_image:
@@ -43,9 +43,21 @@ generate_image:
     For each engineered prompt, call tool for generating image:
     Return a JSON list of raw image paths with their indices.
   expected_output: >
-    The path to a final metadata.json file containing the post caption, hashtags, 
-    alt text, and the path to the generated image. 
-    For example: output/posts/{slug}/metadata.json.
-    Output must be valid JSON only, no commentary or code fences.
+    [{ "index": 1,"image_path": "output/posts/how-compound-interest-works/raw_images/1.png"}, ... ]
   agent: compositor  
-  output_file: output/posts/{slug}/metadata.json
+  output_file: output/agent/compositor/generate_image.md
+
+
+generate_add_logo_to_image:
+  description: >
+    For each generate_image, call tool for AddLogoToImageTool:
+    base_image_path=image_path, logo_path={brand_logo}, 
+    output_path='output/',
+    opacity=1,
+    margin=0,
+    logo_size=(150, 120) 
+    Return a JSON list of raw image paths with their indices.
+  expected_output: >
+    metadata with new image with logo
+  agent: compositor  
+  output_file: output/agent/compositor/generate_add_logo_to_image.md

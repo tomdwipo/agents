@@ -21,10 +21,10 @@ image_prompt_engineer:
   role: >
     {topic} Image Prompt Engineer
   goal: >
-    Craft visually coherent prompts for dall-e that reinforce the learning objective.
+    Craft visually coherent prompts for imagen that reinforce the learning objective.
   backstory: >
     You translate messaging into visual scenes describing subject, setting, composition, style, lighting, and color mood;.
-  llm: gpt-4o-mini
+  llm: gemini/gemini-2.5-pro
   
 compositor:
   role: >
@@ -33,4 +33,4 @@ compositor:
     Apply brand overlays (Inter font), layout rules, and export final slides at 1080x1350 with the logo at bottom-right.
   backstory: >
     You ensure readability, contrast, and consistent brand presence across slides and prepare final exports and metadata.
-  llm: gpt-4o-mini
+  llm: gemini/gemini-2.5-pro

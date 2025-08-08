@@ -182,18 +182,15 @@ class ComposeSlideTool(BaseTool):
 
         # Logo bottom-right
         try:
-            logo = Image.open(brand.logo_path).convert("RGBA")
-            # scale logo to ~10% of canvas width
-            target_w = int(CANVAS_W * 0.12)
-            scale = target_w / logo.width
-            new_w = target_w
-            new_h = int(logo.height * scale)
-            logo = logo.resize((new_w, new_h), Image.LANCZOS)
-
-            # Position
-            lx = CANVAS_W - margin - new_w
-            ly = CANVAS_H - margin - new_h
-            canvas.paste(logo, (lx, ly), mask=logo)
+            from content.tools.image_utils import AddLogoToImageTool
+            add_logo_tool = AddLogoToImageTool()
+            add_logo_tool._run(
+                base_image_path=save_path,
+                logo_path=brand.logo_path,
+                output_path=save_path,
+                position='bottom-right',
+                margin=margin
+            )
         except Exception:
             # No logo available, ignore
             pass

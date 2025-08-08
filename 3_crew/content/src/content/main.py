@@ -17,7 +17,7 @@ DEFAULT_TOPIC = "How Compound Interest Works"
 DEFAULT_SLIDE_COUNT = 2
 DEFAULT_PRIMARY = "#000000"
 DEFAULT_SECONDARY = "#FFFFFF"
-DEFAULT_BRAND_LOGO = "3_crew/content/assets/logo.png"
+DEFAULT_BRAND_LOGO = "assets/logo.png"
 DEFAULT_BRAND_FONT = "3_crew/content/assets/fonts/InterVariable.ttf"
 DEFAULT_OUTPUT_BASE = "3_crew/content/output/carousels"
 
