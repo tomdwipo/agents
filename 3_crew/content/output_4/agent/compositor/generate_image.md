@@ -1,2 +1,0 @@
-
-Thought: I

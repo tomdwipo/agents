@@ -29,7 +29,7 @@ engineer_prompts:
   description: >
     For each slide, craft a visual prompt for iamgen that supports the message from agent copywriter.
     Include subject, setting, composition, style (e.g., modern, minimal), lighting, color mood.
-    Require high-contrast areas for black/white overlays. Explicitly: "no watermarks".
+    Require high-contrast areas for black/white overlays. background color solid black. Explicitly: "no watermarks".
     focus on text from write_copy task.
     prompt structure is like this: Minimalist flat design vector icon of a [CONCEPT]. The icon is a single, centered glyph with clean, sharp lines. Solid black background. The iconography is a solid, vibrant purple with the hex code #6a45ff. No gradients, no shadows, no text. Symmetrical and perfectly balanced, ideal for an Instagram post.
     Output must be valid JSON only.

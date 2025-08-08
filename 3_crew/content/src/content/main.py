@@ -13,8 +13,8 @@ warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 # Replace with inputs you want to test with, it will automatically
 # interpolate any tasks and agents information
 
-DEFAULT_TOPIC = "productivity"
-DEFAULT_SLIDE_COUNT = 3
+DEFAULT_TOPIC = "fast"
+DEFAULT_SLIDE_COUNT = 2
 DEFAULT_PRIMARY = "#000000"
 DEFAULT_SECONDARY = "#FFFFFF"
 DEFAULT_BRAND_LOGO = "assets/logo.png"
