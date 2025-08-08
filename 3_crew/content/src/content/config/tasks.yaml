@@ -1,0 +1,51 @@
+
+# --- Instagram Carousel Pipeline ---
+
+plan_carousel:
+  description: >
+    Given the topic "{topic}" and slide_count "{slide_count}", produce a JSON outline
+    for an educational Instagram carousel. Include exactly slide_count slides with fields:
+    index (1-based), title (<= 8 words), bullets (2-4 bullets each, <= 12 words).
+    Output must be valid JSON only, no commentary or code fences.
+  expected_output: >
+    { "slides": [ { "index": 1, "title": "Title", "bullets": ["...", "..."] }, ... ] }
+  agent: carousel_planner
+  output_file: output/agent/carousel_planner/plan_carousel.json
+
+write_copy:
+  description: >
+    Using the outline from plan_carousel, write final per-slide copy.
+    For each slide output: index, title (<= 8 words), body (<= 25 words, single short paragraph),
+    cta (only on the last slide, else null). Tone: educational, clear, concise. No emojis, no hashtags.
+    Output must be valid JSON only, no commentary or code fences.
+  expected_output: >
+    { "slides": [ { "index": 1, "title": "Title", "body": "Short paragraph", "cta": null }, ... ] }
+  agent: copywriter
+  output_file: output/agent/copywriter/write_copy.json
+
+
+engineer_prompts:
+  description: >
+    For each slide, craft a visual prompt for dall-e that supports the message from agent copywriter.
+    Include subject, setting, composition, style (e.g., modern, minimal), lighting, color mood.
+    Require high-contrast areas for black/white overlays. Explicitly: "no watermarks".
+    focus on text from write_copy task.
+    image should contains title, body, and cta if necessary
+    Output must be valid JSON only.
+  expected_output: >
+    { "prompts": [ { "index": 1, "prompt": "...", "title":"Title", "body": "Short paragraph", "cta": null }, ... ] }
+  agent: image_prompt_engineer
+  output_file: output/agent/image_prompt_engineer/engineer_prompts.json
+
+
+generate_image:
+  description: >
+    For each engineered prompt, call tool for generating image:
+    Return a JSON list of raw image paths with their indices.
+  expected_output: >
+    The path to a final metadata.json file containing the post caption, hashtags, 
+    alt text, and the path to the generated image. 
+    For example: output/posts/{slug}/metadata.json.
+    Output must be valid JSON only, no commentary or code fences.
+  agent: compositor  
+  output_file: output/posts/{slug}/metadata.json

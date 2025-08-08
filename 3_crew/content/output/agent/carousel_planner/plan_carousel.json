@@ -1,0 +1,24 @@
+```json
+{
+  "slides": [
+    {
+      "index": 1,
+      "title": "Make Your Money Work For You",
+      "bullets": [
+        "It’s interest earning interest on your original money.",
+        "Your money grows exponentially, not just linearly.",
+        "Think of it as a financial snowball effect."
+      ]
+    },
+    {
+      "index": 2,
+      "title": "The Power of Starting Early",
+      "bullets": [
+        "In Year 1, $100 at 10% becomes $110.",
+        "In Year 2, you earn 10% on $110.",
+        "Start investing now to let time work for you."
+      ]
+    }
+  ]
+}
+```

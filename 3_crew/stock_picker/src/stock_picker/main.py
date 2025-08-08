@@ -14,7 +14,7 @@ def run():
     Run the research crew.
     """
     inputs = {
-        'sector': 'Technology',
+        'sector': 'saham di IHSG stock market indonesia with high growth and best channel of revenue',
         "current_date": str(datetime.now())
     }
 
