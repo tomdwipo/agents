@@ -1,0 +1,14 @@
+{
+  "id": "approval_1754727058710_s7mjau3uv",
+  "title": "Requirements Phase: video-generation-crew - Ready for Review (2nd Revision)",
+  "filePath": ".spec-workflow/specs/video-generation-crew/requirements.md",
+  "type": "document",
+  "status": "approved",
+  "createdAt": "2025-08-09T08:10:58.710Z",
+  "category": "spec",
+  "categoryName": "video-generation-crew",
+  "response": "No specific feedback provided",
+  "annotations": "{\n  \"decision\": \"approved\",\n  \"comments\": [],\n  \"summary\": \"No specific feedback provided\",\n  \"timestamp\": \"2025-08-09T08:11:50.920Z\"\n}",
+  "respondedAt": "2025-08-09T08:11:50.934Z",
+  "comments": []
+}

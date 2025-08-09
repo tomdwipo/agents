@@ -1,0 +1,14 @@
+{
+  "id": "approval_1754727627421_9ynzv45h0",
+  "title": "Tasks Phase: video-generation-crew - Ready for Review (Revised)",
+  "filePath": ".spec-workflow/specs/video-generation-crew/tasks.md",
+  "type": "document",
+  "status": "approved",
+  "createdAt": "2025-08-09T08:20:27.421Z",
+  "category": "spec",
+  "categoryName": "video-generation-crew",
+  "response": "No specific feedback provided",
+  "annotations": "{\n  \"decision\": \"approved\",\n  \"comments\": [],\n  \"summary\": \"No specific feedback provided\",\n  \"timestamp\": \"2025-08-09T08:22:43.672Z\"\n}",
+  "respondedAt": "2025-08-09T08:22:43.683Z",
+  "comments": []
+}

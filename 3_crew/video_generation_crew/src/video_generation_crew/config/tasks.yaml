@@ -1,0 +1,5 @@
+generate_video_task:
+  description: >
+    Generate a video based on the provided topic. The video should be an 8-second, purely visual narrative animation on a solid black (#000000) background. All iconography is a solid, vibrant purple (#6a45ff). The animation explains the concept of daily improvement without using any text.
+  expected_output: >
+    The path to the generated video file.

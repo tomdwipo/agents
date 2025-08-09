@@ -1,0 +1,26 @@
+{
+  "id": "approval_1754727136260_5fiq7paea",
+  "title": "Design Phase: video-generation-crew - Ready for Review",
+  "filePath": ".spec-workflow/specs/video-generation-crew/design.md",
+  "type": "document",
+  "status": "needs-revision",
+  "createdAt": "2025-08-09T08:12:16.260Z",
+  "category": "spec",
+  "categoryName": "video-generation-crew",
+  "response": "Feedback Summary (1 comments):\n\nSpecific Text Comments:\n1. \"```mermaid\ngraph TD\n    A[Input: Topic] --> B[Vide...\": fixing mermaid graph first because i cant review it\n",
+  "annotations": "{\n  \"decision\": \"rejected\",\n  \"comments\": [\n    {\n      \"type\": \"selection\",\n      \"comment\": \"fixing mermaid graph first because i cant review it\",\n      \"timestamp\": \"2025-08-09T08:13:25.321Z\",\n      \"selectedText\": \"```mermaid\\ngraph TD\\n    A[Input: Topic] --> B[Video Generation Agent];\\n    B --> C{Video Generation Tool (veo-2.0-generate-001)};\\n    C --> D[Output: 9:16 Video File];\\n```\",\n      \"highlightColor\": {\n        \"bg\": \"rgba(255, 235, 59, 0.3)\",\n        \"border\": \"#FFEB3B\",\n        \"name\": \"#ffeb3b\"\n      }\n    }\n  ],\n  \"summary\": \"Feedback Summary (1 comments):\\n\\nSpecific Text Comments:\\n1. \\\"```mermaid\\ngraph TD\\n    A[Input: Topic] --> B[Vide...\\\": fixing mermaid graph first because i cant review it\\n\",\n  \"timestamp\": \"2025-08-09T08:13:26.657Z\"\n}",
+  "respondedAt": "2025-08-09T08:13:26.669Z",
+  "comments": [
+    {
+      "type": "selection",
+      "comment": "fixing mermaid graph first because i cant review it",
+      "timestamp": "2025-08-09T08:13:25.321Z",
+      "selectedText": "```mermaid\ngraph TD\n    A[Input: Topic] --> B[Video Generation Agent];\n    B --> C{Video Generation Tool (veo-2.0-generate-001)};\n    C --> D[Output: 9:16 Video File];\n```",
+      "highlightColor": {
+        "bg": "rgba(255, 235, 59, 0.3)",
+        "border": "#FFEB3B",
+        "name": "#ffeb3b"
+      }
+    }
+  ]
+}

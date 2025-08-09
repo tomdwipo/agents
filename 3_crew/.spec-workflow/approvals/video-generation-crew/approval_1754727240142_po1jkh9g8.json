@@ -1,0 +1,26 @@
+{
+  "id": "approval_1754727240142_po1jkh9g8",
+  "title": "Design Phase: video-generation-crew - Ready for Review (Revised)",
+  "filePath": ".spec-workflow/specs/video-generation-crew/design.md",
+  "type": "document",
+  "status": "needs-revision",
+  "createdAt": "2025-08-09T08:14:00.142Z",
+  "category": "spec",
+  "categoryName": "video-generation-crew",
+  "response": "Feedback Summary (1 comments):\n\nSpecific Text Comments:\n1. \"## Testing Strategy\n\n### Unit Testing\n- A unit tes...\": for now this can be ignore first\n",
+  "annotations": "{\n  \"decision\": \"rejected\",\n  \"comments\": [\n    {\n      \"type\": \"selection\",\n      \"comment\": \"for now this can be ignore first\",\n      \"timestamp\": \"2025-08-09T08:15:58.739Z\",\n      \"selectedText\": \"## Testing Strategy\\n\\n### Unit Testing\\n- A unit test will be created for the Video Generation Tool to ensure it correctly formats the prompt and handles API responses (including errors).\\n\\n### Integration Testing\\n- An integration test will be created for the crew to ensure that it can be run from the `main.py` entry point and that it produces a video file.\",\n      \"highlightColor\": {\n        \"bg\": \"rgba(255, 235, 59, 0.3)\",\n        \"border\": \"#FFEB3B\",\n        \"name\": \"#ffeb3b\"\n      }\n    }\n  ],\n  \"summary\": \"Feedback Summary (1 comments):\\n\\nSpecific Text Comments:\\n1. \\\"## Testing Strategy\\n\\n### Unit Testing\\n- A unit tes...\\\": for now this can be ignore first\\n\",\n  \"timestamp\": \"2025-08-09T08:16:00.170Z\"\n}",
+  "respondedAt": "2025-08-09T08:16:00.179Z",
+  "comments": [
+    {
+      "type": "selection",
+      "comment": "for now this can be ignore first",
+      "timestamp": "2025-08-09T08:15:58.739Z",
+      "selectedText": "## Testing Strategy\n\n### Unit Testing\n- A unit test will be created for the Video Generation Tool to ensure it correctly formats the prompt and handles API responses (including errors).\n\n### Integration Testing\n- An integration test will be created for the crew to ensure that it can be run from the `main.py` entry point and that it produces a video file.",
+      "highlightColor": {
+        "bg": "rgba(255, 235, 59, 0.3)",
+        "border": "#FFEB3B",
+        "name": "#ffeb3b"
+      }
+    }
+  ]
+}

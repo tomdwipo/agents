@@ -1,0 +1,26 @@
+{
+  "id": "approval_1754727434367_hs2lm5ilk",
+  "title": "Tasks Phase: video-generation-crew - Ready for Review",
+  "filePath": ".spec-workflow/specs/video-generation-crew/tasks.md",
+  "type": "document",
+  "status": "needs-revision",
+  "createdAt": "2025-08-09T08:17:14.367Z",
+  "category": "spec",
+  "categoryName": "video-generation-crew",
+  "response": "Feedback Summary (1 comments):\n\nSpecific Text Comments:\n1. \". Set up the project structure for the new crew.\": use in terminal bash \"crewai create crew {name project}\"\n",
+  "annotations": "{\n  \"decision\": \"rejected\",\n  \"comments\": [\n    {\n      \"type\": \"selection\",\n      \"comment\": \"use in terminal bash \\\"crewai create crew {name project}\\\"\",\n      \"timestamp\": \"2025-08-09T08:19:58.271Z\",\n      \"selectedText\": \". Set up the project structure for the new crew.\",\n      \"highlightColor\": {\n        \"bg\": \"rgba(255, 235, 59, 0.3)\",\n        \"border\": \"#FFEB3B\",\n        \"name\": \"#ffeb3b\"\n      }\n    }\n  ],\n  \"summary\": \"Feedback Summary (1 comments):\\n\\nSpecific Text Comments:\\n1. \\\". Set up the project structure for the new crew.\\\": use in terminal bash \\\"crewai create crew {name project}\\\"\\n\",\n  \"timestamp\": \"2025-08-09T08:19:59.505Z\"\n}",
+  "respondedAt": "2025-08-09T08:19:59.519Z",
+  "comments": [
+    {
+      "type": "selection",
+      "comment": "use in terminal bash \"crewai create crew {name project}\"",
+      "timestamp": "2025-08-09T08:19:58.271Z",
+      "selectedText": ". Set up the project structure for the new crew.",
+      "highlightColor": {
+        "bg": "rgba(255, 235, 59, 0.3)",
+        "border": "#FFEB3B",
+        "name": "#ffeb3b"
+      }
+    }
+  ]
+}

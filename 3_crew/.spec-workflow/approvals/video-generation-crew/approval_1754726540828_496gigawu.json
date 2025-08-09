@@ -3,8 +3,35 @@
   "title": "Requirements Phase: video-generation-crew - Ready for Review",
   "filePath": ".spec-workflow/specs/video-generation-crew/requirements.md",
   "type": "document",
-  "status": "pending",
+  "status": "needs-revision",
   "createdAt": "2025-08-09T08:02:20.828Z",
   "category": "spec",
-  "categoryName": "video-generation-crew"
+  "categoryName": "video-generation-crew",
+  "response": "Feedback Summary (2 comments):\n\nSpecific Text Comments:\n1. \"The crew will take a topic and a script as input,\": focus on topic first\n2. \"nd produce a video with voiceover and background m...\": for now video iconography only without voiceover and music\n",
+  "annotations": "{\n  \"decision\": \"rejected\",\n  \"comments\": [\n    {\n      \"type\": \"selection\",\n      \"comment\": \"focus on topic first\",\n      \"timestamp\": \"2025-08-09T08:04:02.924Z\",\n      \"selectedText\": \"The crew will take a topic and a script as input,\",\n      \"highlightColor\": {\n        \"bg\": \"rgba(255, 235, 59, 0.3)\",\n        \"border\": \"#FFEB3B\",\n        \"name\": \"#ffeb3b\"\n      }\n    },\n    {\n      \"type\": \"selection\",\n      \"comment\": \"for now video iconography only without voiceover and music\",\n      \"timestamp\": \"2025-08-09T08:04:38.221Z\",\n      \"selectedText\": \"nd produce a video with voiceover and background music.\",\n      \"highlightColor\": {\n        \"bg\": \"rgba(255, 235, 59, 0.3)\",\n        \"border\": \"#FFEB3B\",\n        \"name\": \"#ffeb3b\"\n      }\n    }\n  ],\n  \"summary\": \"Feedback Summary (2 comments):\\n\\nSpecific Text Comments:\\n1. \\\"The crew will take a topic and a script as input,\\\": focus on topic first\\n2. \\\"nd produce a video with voiceover and background m...\\\": for now video iconography only without voiceover and music\\n\",\n  \"timestamp\": \"2025-08-09T08:04:39.522Z\"\n}",
+  "respondedAt": "2025-08-09T08:04:39.527Z",
+  "comments": [
+    {
+      "type": "selection",
+      "comment": "focus on topic first",
+      "timestamp": "2025-08-09T08:04:02.924Z",
+      "selectedText": "The crew will take a topic and a script as input,",
+      "highlightColor": {
+        "bg": "rgba(255, 235, 59, 0.3)",
+        "border": "#FFEB3B",
+        "name": "#ffeb3b"
+      }
+    },
+    {
+      "type": "selection",
+      "comment": "for now video iconography only without voiceover and music",
+      "timestamp": "2025-08-09T08:04:38.221Z",
+      "selectedText": "nd produce a video with voiceover and background music.",
+      "highlightColor": {
+        "bg": "rgba(255, 235, 59, 0.3)",
+        "border": "#FFEB3B",
+        "name": "#ffeb3b"
+      }
+    }
+  ]
 }
