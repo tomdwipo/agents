@@ -1,0 +1,20 @@
+{
+  "id": "approval_1754725189969_yathvbgzc",
+  "title": "Steering Documents Review: tech.md",
+  "filePath": ".spec-workflow/steering/tech.md",
+  "type": "document",
+  "status": "needs-revision",
+  "createdAt": "2025-08-09T07:39:49.969Z",
+  "category": "spec",
+  "categoryName": "steering",
+  "response": "Feedback Summary (1 comments):\n\nGeneral Comments:\n1. review all technology use in here\n\n",
+  "annotations": "{\n  \"decision\": \"rejected\",\n  \"comments\": [\n    {\n      \"type\": \"general\",\n      \"comment\": \"review all technology use in here\",\n      \"timestamp\": \"2025-08-09T07:41:41.353Z\"\n    }\n  ],\n  \"summary\": \"Feedback Summary (1 comments):\\n\\nGeneral Comments:\\n1. review all technology use in here\\n\\n\",\n  \"timestamp\": \"2025-08-09T07:41:42.398Z\"\n}",
+  "respondedAt": "2025-08-09T07:41:42.406Z",
+  "comments": [
+    {
+      "type": "general",
+      "comment": "review all technology use in here",
+      "timestamp": "2025-08-09T07:41:41.353Z"
+    }
+  ]
+}

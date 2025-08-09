@@ -1,0 +1,20 @@
+{
+  "id": "approval_1754725169957_gp3xl4j3w",
+  "title": "Steering Documents Review: product.md",
+  "filePath": ".spec-workflow/steering/product.md",
+  "type": "document",
+  "status": "needs-revision",
+  "createdAt": "2025-08-09T07:39:29.957Z",
+  "category": "spec",
+  "categoryName": "steering",
+  "response": "Feedback Summary (1 comments):\n\nGeneral Comments:\n1. recheck all product in here\n\n",
+  "annotations": "{\n  \"decision\": \"rejected\",\n  \"comments\": [\n    {\n      \"type\": \"general\",\n      \"comment\": \"recheck all product in here\",\n      \"timestamp\": \"2025-08-09T07:41:11.013Z\"\n    }\n  ],\n  \"summary\": \"Feedback Summary (1 comments):\\n\\nGeneral Comments:\\n1. recheck all product in here\\n\\n\",\n  \"timestamp\": \"2025-08-09T07:41:12.014Z\"\n}",
+  "respondedAt": "2025-08-09T07:41:12.024Z",
+  "comments": [
+    {
+      "type": "general",
+      "comment": "recheck all product in here",
+      "timestamp": "2025-08-09T07:41:11.013Z"
+    }
+  ]
+}

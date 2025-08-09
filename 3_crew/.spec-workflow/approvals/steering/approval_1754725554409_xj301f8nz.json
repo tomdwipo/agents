@@ -1,0 +1,26 @@
+{
+  "id": "approval_1754725554409_xj301f8nz",
+  "title": "Steering Documents Review: product.md (2nd Revision)",
+  "filePath": ".spec-workflow/steering/product.md",
+  "type": "document",
+  "status": "needs-revision",
+  "createdAt": "2025-08-09T07:45:54.409Z",
+  "category": "spec",
+  "categoryName": "steering",
+  "response": "Feedback Summary (1 comments):\n\nSpecific Text Comments:\n1. \"- **What problem does this project solve?** It aut...\": dont only review in 3_crew/content but also other folder in 3_crew for more understanding\n",
+  "annotations": "{\n  \"decision\": \"rejected\",\n  \"comments\": [\n    {\n      \"type\": \"selection\",\n      \"comment\": \"dont only review in 3_crew/content but also other folder in 3_crew for more understanding\",\n      \"timestamp\": \"2025-08-09T07:46:43.625Z\",\n      \"selectedText\": \"- **What problem does this project solve?** It automates the multi-step process of creating educational Instagram carousels. This addresses the inefficiency of manual content creation, which involves separate stages for planning, copywriting, image creation, and branding. The project ensures a consistent, high-quality output with minimal manual effort.\\n- **Who are the target users?** Content creators, marketing teams, and social media managers who need to produce branded educational content for Instagram in a scalable and efficient manner.\\n- **What is the long-term vision?** To develop a robust, configurable content generation pipeline that can be adapted for various social media platforms and content formats, moving towards a fully autonomous content creation workflow.\",\n      \"highlightColor\": {\n        \"bg\": \"rgba(255, 235, 59, 0.3)\",\n        \"border\": \"#FFEB3B\",\n        \"name\": \"#ffeb3b\"\n      }\n    }\n  ],\n  \"summary\": \"Feedback Summary (1 comments):\\n\\nSpecific Text Comments:\\n1. \\\"- **What problem does this project solve?** It aut...\\\": dont only review in 3_crew/content but also other folder in 3_crew for more understanding\\n\",\n  \"timestamp\": \"2025-08-09T07:46:46.047Z\"\n}",
+  "respondedAt": "2025-08-09T07:46:46.052Z",
+  "comments": [
+    {
+      "type": "selection",
+      "comment": "dont only review in 3_crew/content but also other folder in 3_crew for more understanding",
+      "timestamp": "2025-08-09T07:46:43.625Z",
+      "selectedText": "- **What problem does this project solve?** It automates the multi-step process of creating educational Instagram carousels. This addresses the inefficiency of manual content creation, which involves separate stages for planning, copywriting, image creation, and branding. The project ensures a consistent, high-quality output with minimal manual effort.\n- **Who are the target users?** Content creators, marketing teams, and social media managers who need to produce branded educational content for Instagram in a scalable and efficient manner.\n- **What is the long-term vision?** To develop a robust, configurable content generation pipeline that can be adapted for various social media platforms and content formats, moving towards a fully autonomous content creation workflow.",
+      "highlightColor": {
+        "bg": "rgba(255, 235, 59, 0.3)",
+        "border": "#FFEB3B",
+        "name": "#ffeb3b"
+      }
+    }
+  ]
+}

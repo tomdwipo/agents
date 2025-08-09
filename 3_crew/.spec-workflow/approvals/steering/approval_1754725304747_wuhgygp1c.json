@@ -1,0 +1,20 @@
+{
+  "id": "approval_1754725304747_wuhgygp1c",
+  "title": "Steering Documents Review: structure.md",
+  "filePath": ".spec-workflow/steering/structure.md",
+  "type": "document",
+  "status": "needs-revision",
+  "createdAt": "2025-08-09T07:41:44.747Z",
+  "category": "spec",
+  "categoryName": "steering",
+  "response": "Feedback Summary (1 comments):\n\nGeneral Comments:\n1. dont only steering for content but others too\n\n",
+  "annotations": "{\n  \"decision\": \"rejected\",\n  \"comments\": [\n    {\n      \"type\": \"general\",\n      \"comment\": \"dont only steering for content but others too\",\n      \"timestamp\": \"2025-08-09T07:42:16.566Z\"\n    }\n  ],\n  \"summary\": \"Feedback Summary (1 comments):\\n\\nGeneral Comments:\\n1. dont only steering for content but others too\\n\\n\",\n  \"timestamp\": \"2025-08-09T07:42:17.648Z\"\n}",
+  "respondedAt": "2025-08-09T07:42:17.654Z",
+  "comments": [
+    {
+      "type": "general",
+      "comment": "dont only steering for content but others too",
+      "timestamp": "2025-08-09T07:42:16.566Z"
+    }
+  ]
+}

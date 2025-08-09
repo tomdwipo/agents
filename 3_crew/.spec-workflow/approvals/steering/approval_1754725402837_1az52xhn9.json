@@ -1,0 +1,26 @@
+{
+  "id": "approval_1754725402837_1az52xhn9",
+  "title": "Steering Documents Review: product.md (Revised)",
+  "filePath": ".spec-workflow/steering/product.md",
+  "type": "document",
+  "status": "needs-revision",
+  "createdAt": "2025-08-09T07:43:22.837Z",
+  "category": "spec",
+  "categoryName": "steering",
+  "response": "Feedback Summary (1 comments):\n\nSpecific Text Comments:\n1. \"- **What problem does this project solve?** It aut...\": try look in folder 3_crew\n",
+  "annotations": "{\n  \"decision\": \"rejected\",\n  \"comments\": [\n    {\n      \"type\": \"selection\",\n      \"comment\": \"try look in folder 3_crew\",\n      \"timestamp\": \"2025-08-09T07:44:11.002Z\",\n      \"selectedText\": \"- **What problem does this project solve?** It automates the end-to-end creation of educational Instagram carousels, from planning and copywriting to image generation and brand application. This solves the problem of a fragmented, time-consuming manual workflow and ensures brand consistency.\\n- **Who are the target users?** Content creators, social media managers, and marketing teams who need to produce high-quality, branded educational content for Instagram efficiently.\\n- **What is the long-term vision?** To evolve into a versatile, multi-platform content generation pipeline that can be easily configured for various content formats and branding requirements with minimal human oversight.\",\n      \"highlightColor\": {\n        \"bg\": \"rgba(255, 235, 59, 0.3)\",\n        \"border\": \"#FFEB3B\",\n        \"name\": \"#ffeb3b\"\n      }\n    }\n  ],\n  \"summary\": \"Feedback Summary (1 comments):\\n\\nSpecific Text Comments:\\n1. \\\"- **What problem does this project solve?** It aut...\\\": try look in folder 3_crew\\n\",\n  \"timestamp\": \"2025-08-09T07:44:18.401Z\"\n}",
+  "respondedAt": "2025-08-09T07:44:18.408Z",
+  "comments": [
+    {
+      "type": "selection",
+      "comment": "try look in folder 3_crew",
+      "timestamp": "2025-08-09T07:44:11.002Z",
+      "selectedText": "- **What problem does this project solve?** It automates the end-to-end creation of educational Instagram carousels, from planning and copywriting to image generation and brand application. This solves the problem of a fragmented, time-consuming manual workflow and ensures brand consistency.\n- **Who are the target users?** Content creators, social media managers, and marketing teams who need to produce high-quality, branded educational content for Instagram efficiently.\n- **What is the long-term vision?** To evolve into a versatile, multi-platform content generation pipeline that can be easily configured for various content formats and branding requirements with minimal human oversight.",
+      "highlightColor": {
+        "bg": "rgba(255, 235, 59, 0.3)",
+        "border": "#FFEB3B",
+        "name": "#ffeb3b"
+      }
+    }
+  ]
+}

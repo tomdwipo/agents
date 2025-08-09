@@ -1,0 +1,42 @@
+{
+  "id": "approval_1754725728772_2qnigrqs4",
+  "title": "Steering Documents Review: product.md (4th Revision)",
+  "filePath": ".spec-workflow/steering/product.md",
+  "type": "document",
+  "status": "needs-revision",
+  "createdAt": "2025-08-09T07:48:48.772Z",
+  "category": "spec",
+  "categoryName": "steering",
+  "response": "Feedback Summary (3 comments):\n\nGeneral Comments:\n1. should full comprehensive in 3_crew folder. not only content crew.\n\nSpecific Text Comments:\n1. \"## Feature Priorities (for Content Crew)\": add for other too not only for content crew\n2. \"## Success Metrics (for Content Crew)\": create for other too not only for content crew\n",
+  "annotations": "{\n  \"decision\": \"rejected\",\n  \"comments\": [\n    {\n      \"type\": \"selection\",\n      \"comment\": \"add for other too not only for content crew\",\n      \"timestamp\": \"2025-08-09T07:50:29.161Z\",\n      \"selectedText\": \"## Feature Priorities (for Content Crew)\",\n      \"highlightColor\": {\n        \"bg\": \"rgba(233, 30, 99, 0.3)\",\n        \"border\": \"#E91E63\",\n        \"name\": \"#e91e63\"\n      }\n    },\n    {\n      \"type\": \"selection\",\n      \"comment\": \"create for other too not only for content crew\",\n      \"timestamp\": \"2025-08-09T07:50:54.874Z\",\n      \"selectedText\": \"## Success Metrics (for Content Crew)\",\n      \"highlightColor\": {\n        \"bg\": \"rgba(233, 30, 99, 0.3)\",\n        \"border\": \"#E91E63\",\n        \"name\": \"#e91e63\"\n      }\n    },\n    {\n      \"type\": \"general\",\n      \"comment\": \"should full comprehensive in 3_crew folder. not only content crew.\",\n      \"timestamp\": \"2025-08-09T07:51:43.791Z\"\n    }\n  ],\n  \"summary\": \"Feedback Summary (3 comments):\\n\\nGeneral Comments:\\n1. should full comprehensive in 3_crew folder. not only content crew.\\n\\nSpecific Text Comments:\\n1. \\\"## Feature Priorities (for Content Crew)\\\": add for other too not only for content crew\\n2. \\\"## Success Metrics (for Content Crew)\\\": create for other too not only for content crew\\n\",\n  \"timestamp\": \"2025-08-09T07:51:45.280Z\"\n}",
+  "respondedAt": "2025-08-09T07:51:45.291Z",
+  "comments": [
+    {
+      "type": "selection",
+      "comment": "add for other too not only for content crew",
+      "timestamp": "2025-08-09T07:50:29.161Z",
+      "selectedText": "## Feature Priorities (for Content Crew)",
+      "highlightColor": {
+        "bg": "rgba(233, 30, 99, 0.3)",
+        "border": "#E91E63",
+        "name": "#e91e63"
+      }
+    },
+    {
+      "type": "selection",
+      "comment": "create for other too not only for content crew",
+      "timestamp": "2025-08-09T07:50:54.874Z",
+      "selectedText": "## Success Metrics (for Content Crew)",
+      "highlightColor": {
+        "bg": "rgba(233, 30, 99, 0.3)",
+        "border": "#E91E63",
+        "name": "#e91e63"
+      }
+    },
+    {
+      "type": "general",
+      "comment": "should full comprehensive in 3_crew folder. not only content crew.",
+      "timestamp": "2025-08-09T07:51:43.791Z"
+    }
+  ]
+}
