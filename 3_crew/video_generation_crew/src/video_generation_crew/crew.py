@@ -12,15 +12,20 @@ class VideoGenerationCrew():
 	def video_producer(self) -> Agent:
 		return Agent(
 			config=self.agents_config['video_producer'],
-			tools=[VideoGenerationTool()],
-			verbose=True
+			verbose=True,
+			max_execution_time=500, 
+			max_retry_limit=3 
 		)
 
 	@task
 	def generate_video_task(self) -> Task:
 		return Task(
 			config=self.tasks_config['generate_video_task'],
-			agent=self.video_producer()
+			agent=self.video_producer(),
+			tools=[VideoGenerationTool()],
+            max_execution_time=500, 
+			max_retry_limit=3 
+
 		)
 
 	@crew
@@ -30,5 +35,5 @@ class VideoGenerationCrew():
 			agents=self.agents, # Automatically resolves the agents in your crew
 			tasks=self.tasks, # Automatically resolves the tasks in your crew
 			process=Process.sequential,
-			verbose=True
+			verbose=True,
 		)
