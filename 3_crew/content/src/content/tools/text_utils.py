@@ -75,7 +75,7 @@ class AddTextToImageTool(BaseTool):
                     'bottom-right': (img_width - text_width - 20, img_height - text_height - 20),
                     'top-center': ((img_width - text_width) // 2, 20),
                     'bottom-center': ((img_width - text_width) // 2, img_height - text_height - 20),
-                    'center': ((img_width - text_width) // 2, img_height - text_height - 200)
+                    'center': ((img_width - text_width) // 2, img_height - text_height - 170)
                 }
                 if position not in position_map:
                     raise ValueError(f"Invalid position. Choose from: {list(position_map.keys())} or use (x, y) coordinates")

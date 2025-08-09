@@ -6,8 +6,6 @@ from typing import List
 
 # Tools for the carousel pipeline
 from content.tools.openai_images import GenerateImageTool
-from content.tools.composer import ComposeSlideTool
-from content.tools.save_json import SaveJSONTool
 from content.tools.image_utils import AddLogoToImageTool
 from content.tools.text_utils import AddTextToImageTool
 

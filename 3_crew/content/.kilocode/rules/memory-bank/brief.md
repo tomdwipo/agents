@@ -1,1 +1,0 @@
-This project, "Content Crew," is a multi-agent pipeline that automates the creation of educational Instagram carousels. It uses crewAI to orchestrate a sequence of agents that handle everything from planning and copywriting to image generation and brand application. The final output is a set of ready-to-post carousel slides with consistent branding and high-quality content.

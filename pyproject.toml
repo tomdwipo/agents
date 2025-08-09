@@ -51,6 +51,7 @@ dependencies = [
     "frozenlist==1.7.0",
     "fsspec==2025.5.1",
     "google-crc32c==1.7.1",
+    "google-genai>=1.29.0",
     "gradio==5.33.1",
     "gradio-client==1.10.3",
     "greenlet==3.2.3",

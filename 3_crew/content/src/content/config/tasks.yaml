@@ -29,12 +29,15 @@ engineer_prompts:
   description: >
     For each slide, craft a visual prompt for iamgen that supports the message from agent copywriter.
     Include subject, setting, composition, style (e.g., modern, minimal), lighting, color mood.
-    Require high-contrast areas for black overlays. background color solid black. Explicitly: "no watermarks".
+    Require high-contrast areas for black with the hex code {primary_hex} overlays. 
+    background color must solid black with the hex code {primary_hex}. Explicitly: "no watermarks".
     focus on text from write_copy task.
     prompt structure is like this: 
     Minimalist flat design vector icon of a [CONCEPT]. 
-    The icon is a representation of body text, centered glyph with clean, sharp lines. Solid black background.
-    The iconography is a solid, vibrant purple with the hex code #6a45ff. 
+    The icon is a representation of body text, centered glyph with clean, sharp lines. 
+    Must Solid black with the hex code {primary_hex} background.
+    The iconography is a solid, 
+    vibrant purple with the hex code {secondary_hex}. 
     No gradients, no shadows, no text. Symmetrical and perfectly balanced, ideal for an Instagram post.
     Output must be valid JSON only.
   expected_output: >
@@ -63,7 +66,7 @@ generate_add_logo_to_image:
     logo_size=(150, 120) 
     Return a JSON list of raw image paths with their indices.
   expected_output: >
-    [{ "index": 1,"image_with_logo_path": "output/{slug}/posts/raw_images_logo/1.png", "body": "Short paragraph"}, ... ]
+    [{ "index": 1,"image_with_logo_path": "output/{slug}/posts/raw_images/1_logo.png", "body": "Short paragraph"}, ... ]
   agent: compositor  
   output_file: output/{slug}/agent/compositor/generate_add_logo_to_image.md
 
@@ -74,10 +77,10 @@ generate_text_to_image:
         text= get from generate_add_logo_to_image body output,
         output_path='output/{slug}/',
         position= should use position type 'center' not other,
-        font_size= should use size beetween 12-24,
+        font_size= should use size beetween 24-28,
         font_color='white',
         font_path=only use {brand_font}
   expected_output: >
-    [{ "index": 1,"image_with_logo_text_path": "output/{slug}/posts/raw_images_logo_text/1.png"}, ... ]
+    [{ "index": 1,"image_with_logo_text_path": "output/{slug}/posts/raw_images/1_logo_text.png"}, ... ]
   agent: compositor  
   output_file: output/{slug}/agent/compositor/generate_text_to_image.md

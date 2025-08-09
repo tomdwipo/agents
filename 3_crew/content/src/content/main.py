@@ -14,10 +14,10 @@ warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 # interpolate any tasks and agents information
 #     The icon is a single, centered glyph with clean, sharp lines. Solid black background.
 
-DEFAULT_TOPIC = "orchestration"
-DEFAULT_SLIDE_COUNT = 4
+DEFAULT_TOPIC = "focus"
+DEFAULT_SLIDE_COUNT = 7
 DEFAULT_PRIMARY = "#000000"
-DEFAULT_SECONDARY = "#FFFFFF"
+DEFAULT_SECONDARY = "#6a45ff"
 DEFAULT_BRAND_LOGO = "assets/logo.png"
 DEFAULT_BRAND_FONT = "assets/fonts/Inter.ttf"
 
