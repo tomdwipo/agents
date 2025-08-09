@@ -5,38 +5,42 @@ plan_carousel:
   description: >
     Given the topic "{topic}" and slide_count "{slide_count}", produce a JSON outline
     for an educational Instagram carousel. Include exactly slide_count slides with fields:
-    index (1-based), title (<= 3 words), bullets (1-2 bullets each, <= 4 words).
+    index (1-based), title (<= 5 words), bullets (1-2 bullets each, <= 8 words).
     Output must be valid JSON only, no commentary or code fences.
   expected_output: >
     { "slides": [ { "index": 1, "title": "Title", "bullets": ["...", "..."] }, ... ] }
   agent: carousel_planner
-  output_file: output/agent/carousel_planner/plan_carousel.md
+  output_file: output/{slug}/agent/carousel_planner/plan_carousel.md
 
 write_copy:
   description: >
     Using the outline from plan_carousel, write final per-slide copy.
-    For each slide output: index, body (<= 5 words, single short paragraph),
+    For each slide output: index, body (<= 12 words, single short paragraph),
     cta (only on the last slide, else null). Tone: educational, clear, concise. No emojis, no hashtags.
-    caption for 1 post instragam make viral but elegant
+    caption for 1 post instragam make viral but elegant use hashtags also.
     Output must be valid JSON only, no commentary or code fences.
   expected_output: >
     { "slides": [ { "index": 1, "body": "Short paragraph", "cta": null, caption:"" }, ... ] },
   agent: copywriter
-  output_file: output/agent/copywriter/write_copy.md
+  output_file: output/{slug}/agent/copywriter/write_copy.md
 
 
 engineer_prompts:
   description: >
     For each slide, craft a visual prompt for iamgen that supports the message from agent copywriter.
     Include subject, setting, composition, style (e.g., modern, minimal), lighting, color mood.
-    Require high-contrast areas for black/white overlays. background color solid black. Explicitly: "no watermarks".
+    Require high-contrast areas for black overlays. background color solid black. Explicitly: "no watermarks".
     focus on text from write_copy task.
-    prompt structure is like this: Minimalist flat design vector icon of a [CONCEPT]. The icon is a single, centered glyph with clean, sharp lines. Solid black background. The iconography is a solid, vibrant purple with the hex code #6a45ff. No gradients, no shadows, no text. Symmetrical and perfectly balanced, ideal for an Instagram post.
+    prompt structure is like this: 
+    Minimalist flat design vector icon of a [CONCEPT]. 
+    The icon is a representation of body text, centered glyph with clean, sharp lines. Solid black background.
+    The iconography is a solid, vibrant purple with the hex code #6a45ff. 
+    No gradients, no shadows, no text. Symmetrical and perfectly balanced, ideal for an Instagram post.
     Output must be valid JSON only.
   expected_output: >
     { "prompts": [ { "index": 1, "prompt": "...", "body": "Short paragraph"}, ... ] }
   agent: image_prompt_engineer
-  output_file: output/agent/image_prompt_engineer/engineer_prompts.md
+  output_file: output/{slug}/agent/image_prompt_engineer/engineer_prompts.md
 
 
 generate_image:
@@ -44,9 +48,9 @@ generate_image:
     For each engineered prompt, call tool for generating image:
     Return a JSON list of raw image paths with their indices.
   expected_output: >
-    [{ "index": 1,"image_path": "output/posts/how-compound-interest-works/raw_images/1.png", "body": "Short paragraph"}, ... ]
+    [{ "index": 1,"image_path": "output/{slug}/posts/raw_images/1.png", "body": "Short paragraph"}, ... ]
   agent: compositor  
-  output_file: output/agent/compositor/generate_image.md
+  output_file: output/{slug}/agent/compositor/generate_image.md
 
 
 generate_add_logo_to_image:
@@ -59,21 +63,21 @@ generate_add_logo_to_image:
     logo_size=(150, 120) 
     Return a JSON list of raw image paths with their indices.
   expected_output: >
-    [{ "index": 1,"image_with_logo_path": "output/posts/how-compound-interest-works/raw_images/1.png", "body": "Short paragraph"}, ... ]
+    [{ "index": 1,"image_with_logo_path": "output/{slug}/posts/raw_images_logo/1.png", "body": "Short paragraph"}, ... ]
   agent: compositor  
-  output_file: output/agent/compositor/generate_add_logo_to_image.md
+  output_file: output/{slug}/agent/compositor/generate_add_logo_to_image.md
 
 generate_text_to_image:
   description: >
     For each generate_add_logo_to_image, call tool for AddTextToImageTool:
           image_path='output/{slug}/',
         text= get from generate_add_logo_to_image body output,
-        output_path='output/',
+        output_path='output/{slug}/',
         position= should use position type 'center' not other,
         font_size= should use size beetween 12-24,
         font_color='white',
         font_path=only use {brand_font}
   expected_output: >
-    [{ "index": 1,"image_with_logo_text_path": "output/posts/how-compound-interest-works/raw_images/1.png"}, ... ]
+    [{ "index": 1,"image_with_logo_text_path": "output/{slug}/posts/raw_images_logo_text/1.png"}, ... ]
   agent: compositor  
-  output_file: output/agent/compositor/generate_text_to_image.md
+  output_file: output/{slug}/agent/compositor/generate_text_to_image.md

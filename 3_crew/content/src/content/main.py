@@ -12,14 +12,14 @@ warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 # crew locally, so refrain from adding unnecessary logic into this file.
 # Replace with inputs you want to test with, it will automatically
 # interpolate any tasks and agents information
+#     The icon is a single, centered glyph with clean, sharp lines. Solid black background.
 
-DEFAULT_TOPIC = "fast"
-DEFAULT_SLIDE_COUNT = 2
+DEFAULT_TOPIC = "orchestration"
+DEFAULT_SLIDE_COUNT = 4
 DEFAULT_PRIMARY = "#000000"
 DEFAULT_SECONDARY = "#FFFFFF"
 DEFAULT_BRAND_LOGO = "assets/logo.png"
 DEFAULT_BRAND_FONT = "assets/fonts/Inter.ttf"
-DEFAULT_OUTPUT_BASE = "content/output/carousels"
 
 
 def _base_inputs(topic: str) -> dict:
@@ -31,7 +31,6 @@ def _base_inputs(topic: str) -> dict:
         "secondary_hex": DEFAULT_SECONDARY,
         "brand_logo": DEFAULT_BRAND_LOGO,
         "brand_font": DEFAULT_BRAND_FONT,
-        "output_base": DEFAULT_OUTPUT_BASE,
         "slug": slug,
         # legacy/example input still present if used elsewhere
         "current_year": str(datetime.now().year),
